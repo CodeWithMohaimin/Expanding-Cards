@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700 &display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  font-family: "Fjalla One", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.container {
+  width: 90vw;
+  display: flex;
+}
+.panel {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+  height: 80vh;
+  margin: 0 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  flex: 0.3;
+  cursor: pointer;
+}
+.panel.active {
+  flex: 5;
+}
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+.panel h3 {
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  color: #fff;
+  opacity: 0;
+}
